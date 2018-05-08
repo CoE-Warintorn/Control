@@ -1,0 +1,14 @@
+s = poly(0, 's');
+t = 0:0.01:15;
+//a=4;
+R = 2;
+L = 1;
+C = 1;
+R1 = 2;
+C1 = 10e-3;
+//Gs1 = (1/L) / (s + (R/L));
+Gs2 = 1 / (R * C * s + 1);
+Gs3 = 1 / (R1 * C1 * s + 1);
+//plot(t,csim('step',t,Gs1),t,csim('step',t,Gs2));
+plot(t,csim('step',t,Gs2),t,csim('step',t,Gs3));
+xgrid();
