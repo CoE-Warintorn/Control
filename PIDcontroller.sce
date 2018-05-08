@@ -10,5 +10,6 @@ Gint = syslin('c', (Kp2*5.436e6*(s+500)*(s+15))/(s^2+(s+400.26)*(s+3008)))
 
 bode([Gp;Gs],1,1000)
 figure();
+
 plot(t,csim('step', t, Gp/(1+Gp)),t,csim('step', t, Gs/(1+Gs)))
 xgrid()
